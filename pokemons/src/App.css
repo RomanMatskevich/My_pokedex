@@ -1,0 +1,307 @@
+.App {
+  text-align: center;
+
+}
+
+.fullPokemons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+
+
+
+
+.button__wraper{
+  
+  display: inline-block;
+}
+
+.button__wraper span{
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.active_button{
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white
+}
+
+.button__wraper span.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button__wraper span:hover:not(.active) {background-color: #4CAF50;
+                                        color: white;}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.card {
+  background-color: #FFFFFD;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.card-image img {
+  max-height: 100%;
+  max-width: 100%;
+  padding-right: 15px;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.card-text {
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.types-pokemon{
+  font-size: 20px;
+  align-items: last baseline;
+  padding: 5%
+}
+
+.first-type{
+  border-radius: 5px;
+  font-size: 1.4rem;
+   padding: 0% 5% 1% 5%;
+}
+
+.second-type{
+  border-radius: 5px;
+  font-size: 1.4rem;
+  padding: 0% 5% 1% 5%;
+}
+
+.draw-moves div{
+  padding: 0% 0.5% 0.2% 0%;
+  text-decoration-style:dotted;
+  background-color:azure;
+  font-size: 24px;
+ 
+}
+.draw-moves {
+ grid-column-start: 1;
+
+}
+.main{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:30px auto auto auto auto;
+  
+}
+.info{
+ 
+  grid-column-start: 10;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  padding-right: 10%;
+  padding-top: 5%;
+
+}
+
+.info-image{
+  display: flex;
+  font-size: 40px;
+  display: inline-block;
+  padding-right: 10%;
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: 3%;
+}
+
+
+.navbar {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  grid-column-start: span 12;
+  max-height: 25px;
+  border-bottom: solid rosybrown 2px;
+}
+.navbar img{
+  max-height: 25px;
+  align-items: center;
+}
+.navbar__home {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  justify-content: end;
+  
+}
+
+.navbar_pagination{
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  justify-content: end;
+  padding: 5px;
+  border-radius: 10%;
+  margin: 0;
+  text-align: center;
+}
+
+.navbar_pagination:hover{
+ 
+  background-color: gainsboro;
+}
+
+
+.navbar_pagination_id{
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  justify-content: end;
+  padding-right: 10px;
+  padding-left: 10px;
+  
+
+}
+
+.stats-table {
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+
+.stats-table th,
+.stats-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.stats-table th {
+  background-color: #ddd;
+}
+
+.indicator {
+  border: 1px solid black;
+  height: 16px;
+  width: 100%;
+}
+
+.indicator-bar {
+  height: 100%;
+}
+.table-div{
+  grid-column-start: 1;
+  grid-column-end: 9;
+  padding-left: 1%;
+  padding-top: 1%;
+}
+.table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+.table td img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .table {
+    overflow-x: auto;
+    display: block;
+  }
+  .table td {
+    white-space: nowrap;
+  }
+}
+
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loading-spinner {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #007bff;
+  animation: loading-spinner 1s ease-in-out infinite;
+}
+
+@keyframes loading-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
